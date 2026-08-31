@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Oficial da Cidade do Natal - Prefeitura Municipal</title>
+    <!-- Tailwind CSS via CDN para agilizar -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pref-azul': '#004a99', // Cor principal do header
+                        'pref-ouro': '#ffbf00', // Cor da linha de destaque
+                        'pref-fundo': '#f9fafb', // Cor de fundo leve
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pref-fundo text-gray-800 font-sans antialiased">
+
+    <!-- Header Principal -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-5 py-4 flex items-center justify-between">
+            <!-- Logo e Brasão -->
+            <div class="flex items-center space-x-3">
+                <img src="media/brasaodenatal.png" 
+                     alt="Brasão de Natal" class="h-12">
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl text-pref-azul leading-tight">NATAL</span>
+                    <span class="text-xs text-gray-600 uppercase tracking-wide">PREFEITURA MUNICIPAL</span>
+                </div>
+            </div>
+
+            <!-- Menu de Navegação -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+                <a href="#" class="text-pref-azul font-semibold">Início</a>
+                <a href="#" class="hover:text-pref-azul">A prefeitura</a>
+                <a href="#" class="hover:text-pref-azul">Guia de Serviços</a>
+                <a href="#" class="hover:text-pref-azul">A Cidade</a>
+                <a href="#" class="hover:text-pref-azul border-l pl-4 border-gray-300">Login</a>
+            </nav>
+
+            <!-- Barra de Pesquisa -->
+            <div class="relative w-64">
+                <input type="search" placeholder="Pesquisar no portal..." 
+                       class="w-full bg-gray-100 border border-gray-200 rounded-full text-sm py-2 pl-10 pr-4 focus:ring-2 focus:ring-blue-200 focus:border-pref-azul focus:outline-none">
+                <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- Linha de destaque dourada -->
+        <div class="h-1 bg-pref-ouro w-full"></div>
+    </header>
+
+    <!-- Hero Section (Banner Principal) -->
+    <section class="relative bg-pref-azul text-white py-20 px-5">
+        <!-- Imagem de fundo simulada com sobreposição -->
+        <div class="absolute inset-0 bg-[url('media/hero.png')] bg-cover bg-center opacity-100"></div>
+        
+        <div class="max-w-screen-xl mx-auto relative z-10 space-y-6">
+            <!-- Tag de destaque -->
+            <div class="bg-blue-700/60 text-blue-100 inline-block text-xs px-3 py-1 rounded-full">
+                IPTU 2026: Guias disponíveis para pagamento com desconto
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight max-w-3xl">
+                Serviços da Cidade, sem burocracia.
+            </h1>
+            
+            <p class="text-xl text-blue-100 max-w-2xl font-light">
+                Encontre atendimentos, notícias oficiais e canais de transparência em uma interface simples, acessível e feita para você.
+            </p>
+
+            <div class="flex items-center space-x-4 pt-6">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition duration-200 flex items-center space-x-2">
+                    <span>Acessar Serviços</span>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition duration-200">
+                    Saiba Mais
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Últimas Notícias -->
+    <section class="max-w-screen-xl mx-auto px-5 py-16">
+        <div class="flex items-center justify-between mb-10">
+            <div>
+                <h2 class="text-xs uppercase tracking-widest text-blue-600 font-semibold">Fique por dentro</h2>
+                <h3 class="text-3xl font-bold text-gray-900 mt-1">Últimas notícias</h3>
+            </div>
+            <button class="border border-gray-300 text-gray-700 px-5 py-2 rounded-full font-medium text-sm hover:bg-gray-50 transition duration-200">
+                Ver todas as notícias
+            </button>
+        </div>
+
+        <!-- Grid de Cards de Notícias -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Asfalto -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="media/noticia1.png" alt="Obras de pavimentação" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>25 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Prefeitura inicia obras de pavimentação asfáltica e drenagem no bairro Novo...
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Com investimentos do programa de infraestrutura urbana, mais de dez ruas receberão asfalto novo, calçadas acessíveis e sinalização completa neste semestre.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+            <!-- Card 2: Educação -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="https://natal.rn.gov.br/storage/posts/July2024/prefeitura-de-natal-entrega-kits-de-robotica-educacional-para-escolas-da-rede-municipal-de-ensino--669b98483342e.jpeg" alt="Alunos com tablets" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>22 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Rede Municipal de Ensino recebe novos equipamentos tecnológicos e materiais didáticos
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Alunos receberam tablets e novas lousas interativas integradas ao plano de modernização escolar. Iniciativa visa capacitação digital desde a primeira fase de ensino.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+            <!-- Card 3: Vacinação -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="https://tribunadonorte.com.br/wp-content/uploads/2023/04/vacinacao-bivalente-natal-05-04-23-foto-alexandre-kiton-6-scaled-e1683917437843-1024x683.jpg" alt="Pessoa sendo vacinada" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>19 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Campanha de Vacinação contra a Gripe começa na próxima segunda-feira em...
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        A Secretaria de Saúde convoca o público prioritário para comparecer aos postos. Horário estendido de funcionamento foi planejado para facilitar o acesso geral.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    <!-- Segunda Linha de Notícias (Parque Solar, Festival e Processo Seletivo) -->
+    <section class="max-w-screen-xl mx-auto px-5 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 4: Energia Solar -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1509391365330-2e3b97813a2c?auto=format&fit=crop&q=80&w=800" alt="Parque Solar" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>15 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Novo Parque de Energia Solar reduzirá custos públicos de iluminação em até 30...
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Instalação da primeira usina fotovoltaica municipal foi concluída. Projeto inovador faz parte do plano estratégico sustentável para a descarbonização local.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+            <!-- Card 5: Festival -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800" alt="Festival de Cultura" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>12 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Festival de Cultura e Gastronomia atrai mais de 15 mil visitantes na Praça Central
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        O evento anual reuniu artesãos, produtores locais e apresentações culturais diversas, movimentando a economia do turismo regional durante o fim de semana.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+            <!-- Card 6: Processo Seletivo -->
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800" alt="Atendimento" class="h-48 w-full object-cover">
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center text-sm text-gray-500 space-x-2">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>08 FEV 2026</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 leading-tight group-hover:text-pref-azul">
+                        Processo Seletivo Simplificado: Inscrições abertas para 50 vagas em div...
+                    </h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Oportunidades de contratação imediata para funções administrativas, técnicas e de suporte operacional. Edital completo e inscrições disponíveis online.
+                    </p>
+                    <a href="#" class="inline-block text-sm font-medium text-pref-azul hover:underline pt-2">Ler notícia completa</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Seção: Canais de Atendimento / Serviços Mais Procurados -->
+    <section class="bg-gray-100 py-16 px-5 border-t border-gray-200">
+        <div class="max-w-screen-xl mx-auto text-center mb-12">
+            <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold">Canais de Atendimento</span>
+            <h2 class="text-3xl font-bold text-gray-900 mt-1">Serviços Mais Procurados</h2>
+        </div>
+
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card Serviço 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">IPTU e Taxas</h3>
+                    <p class="text-xs text-gray-600">Consulte débitos, emita a 2ª via do carnê ou quite suas cotas com desconto.</p>
+                </div>
+            </div>
+
+            <!-- Card Serviço 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Bolsa Família</h3>
+                    <p class="text-xs text-gray-600">Acompanhe critérios, confira os prazos e consulte as listas de beneficiários.</p>
+                </div>
+            </div>
+
+            <!-- Card Serviço 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Plano de Mobilidade de Natal</h3>
+                    <p class="text-xs text-gray-600">Conheça as rotas de ônibus, projetos de trânsito e melhorias de mobilidade.</p>
+                </div>
+            </div>
+
+            <!-- Card Serviço 4 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Nota Fiscal</h3>
+                    <p class="text-xs text-gray-600">Emita notas fiscais de serviço (NFS-e), consulte histórico e autentique documentos.</p>
+                </div>
+            </div>
+
+            <!-- Card Serviço 5 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Coleta Domiciliar</h3>
+                    <p class="text-xs text-gray-600">Confira os horários, dias de recolhimento de lixo e rotas no seu bairro.</p>
+                </div>
+            </div>
+
+            <!-- Card Serviço 6 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition text-left flex items-start space-x-4">
+                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">ISS</h3>
+                    <p class="text-xs text-gray-600">Acesse serviços tributários para empresas, guias de recolhimento e declarações.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Botão Guia Completo -->
+        <div class="mt-8 text-center">
+            <span class="text-sm text-gray-600">Não encontrou o que precisava? </span>
+            <a href="#" class="text-blue-600 font-semibold text-sm hover:underline inline-flex items-center space-x-1">
+                <span>Acesse o Guia Completo de Serviços (A-Z)</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Indicadores da Cidade (Rodapé Escuro) -->
+    <footer class="bg-[#0b1f36] text-white py-16 px-5 border-t border-blue-900">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-blue-900/60 pb-12 border-b border-blue-900/60">
+            <div class="px-4 pt-4 md:pt-0">
+                <div class="text-4xl font-extrabold text-blue-400 mb-1">48h</div>
+                <div class="text-sm text-gray-300">Tempo médio de resposta da Ouvidoria</div>
+            </div>
+            <div class="px-4 pt-4 md:pt-0">
+                <div class="text-4xl font-extrabold text-blue-400 mb-1">+150</div>
+                <div class="text-sm text-gray-300">Serviços digitais ativos</div>
+            </div>
+            <div class="px-4 pt-4 md:pt-0">
+                <div class="text-4xl font-extrabold text-blue-400 mb-1">98.2%</div>
+                <div class="text-sm text-gray-300">Índice de Transparência Pública</div>
+            </div>
+        </div>
+
+        <!-- Informações Finais e Links Institucionais -->
+        <div class="max-w-screen-xl mx-auto pt-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-xs text-gray-400">
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Prefeitura do Natal</h4>
+                <p class="leading-relaxed">Palácio Felipe Camarão - Rua Ulisses Caldas, 81 - Cidade Alta, Natal - RN, 59025-090</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Acessibilidade & Ajuda</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:underline">Acessibilidade</a></li>
+                    <li><a href="#" class="hover:underline">Contraste Alto</a></li>
+                    <li><a href="#" class="hover:underline">Mapa do Site</a></li>
+                    <li><a href="#" class="hover:underline">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Institucional</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:underline">Gabinete Civil</a></li>
+                    <li><a href="#" class="hover:underline">Diário Oficial</a></li>
+                    <li><a href="#" class="hover:underline">Transparência</a></li>
+                    <li><a href="#" class="hover:underline">Mídias Sociais</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Ouvidoria</h4>
+                <p class="mb-3">Fale com a Ouvidoria para relatar problemas ou tirar dúvidas gerais.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-500 transition">Falar com a Ouvidoria</a>
+            </div>
+        </div>
+
+        <div class="max-w-screen-xl mx-auto pt-8 mt-8 border-t border-blue-900/40 text-center text-gray-500 text-[11px]">
+            <p>© 2026 Prefeitura Municipal do Natal. Todos os direitos reservados. Desenvolvido pela Secretaria Municipal de Tecnologia da Informação (SEMTI)</p>
+        </div>
+    </footer>
+</body>
+</html>
